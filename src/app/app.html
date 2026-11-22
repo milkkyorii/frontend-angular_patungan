@@ -13,7 +13,7 @@
     <div class="d-flex align-items-center" [class.bg-light]="even" [class.border-bottom]="!last">
       <span class="text-muted px-2" style="width: 2.5rem">{{ no + 1 }}.</span>
       <div class="flex-grow-1">
-        <app-item-row [item]="item" (qtyChange)="setQty(item.id, $event)" />
+        <app-item-row [item]="item" (qtyChange)="setQty(item.id, $event)" (remove)="hapusItem(item.id)"/>
       </div>
     </div>
   } @empty {

@@ -55,4 +55,8 @@ export class App {
   protected kosongkanDaftar() {
     this.items.set([]);
   }
+
+  protected hapusItem(id: number) {
+    this.items.update((list) => list.filter((i) => i.id !== id));
+  }
 }
